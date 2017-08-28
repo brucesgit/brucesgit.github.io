@@ -69,6 +69,7 @@ theme: landscape
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
+  username: brucesgit
   repo: https://github.com/brucesgit/brucesgit.github.io
   branch: master
 
