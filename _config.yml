@@ -69,6 +69,6 @@ theme: landscape
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/lovanya/lovanya.github.io
+  repo: git@github.com:lovanya/lovanya.github.io
   branch: master
 
