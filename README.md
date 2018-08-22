@@ -16,9 +16,9 @@
 
 > 在新的设备上部署博客
 
-1. `git clone https://github.com/brucesgit/brucesgit.github.io.gti` 克隆库
-2. `cd brucesgit.github.io/` 进入博客目录
+1. `git clone https://github.com/lovanya/lovanya.github.io.git` 克隆库
+2. `cd lovanya.github.io/` 进入博客目录
 3. `npm install or yarn install` 安装依赖
 4. 发布博客方法参照*更新博客方法*
 
-> 博客在线地址为 https://brucesgit.github.io
+> 博客在线地址为 https://lovanya.github.io

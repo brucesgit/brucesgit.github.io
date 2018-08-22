@@ -3,8 +3,8 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Bruce Blog
-subtitle:
+title: 道心
+subtitle: 无名天地之始，有名万物之母
 description:
 author: Bruce Lin
 language: zh
@@ -12,7 +12,7 @@ timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: brucesgit.github.io/
+url: lovanya.github.io/
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
