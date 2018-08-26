@@ -5,9 +5,9 @@
 # Site
 title: 道心
 subtitle: 无名天地之始，有名万物之母
-description:
+description: 人总是被一定的认知所束缚而活着，这就是现实。而这种认知本身又是暧昧不清的东西，现实也许只是镜花水月。
 author: Bruce Lin
-language: zh
+language: en
 timezone: Asia/Shanghai
 
 # URL
@@ -63,12 +63,12 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:lovanya/lovanya.github.io
+  repo: http://github.com/lovanya/lovanya.github.io
   branch: master
 

@@ -933,9 +933,9 @@ has-values@^1.0.0:
     is-number "^3.0.0"
     kind-of "^4.0.0"
 
-"hexo-asset-image@https://github.com/CodeFalling/hexo-asset-image":
+hexo-asset-image@^0.0.3:
   version "0.0.3"
-  resolved "https://github.com/CodeFalling/hexo-asset-image#dc5a811c118564368e75ab493b2d7b8480dacb92"
+  resolved "http://registry.npm.taobao.org/hexo-asset-image/download/hexo-asset-image-0.0.3.tgz#88e9515673812f0106d73fe0acedd944f8a8a651"
   dependencies:
     cheerio "^0.19.0"
 
