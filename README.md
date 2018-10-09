@@ -27,5 +27,11 @@
 3. `git checkout hexo` 切换到 hexo 分支
 4. `npm install or yarn install` 安装依赖
 5. 发布博客方法参照*更新博客方法*
+6. 提交源码
+    ``` bash
+    git add .
+    git commit -m "add files"
+    git push origin hexo
+    ```
 
 博客在线地址为 https://lovanya.github.io
