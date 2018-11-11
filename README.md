@@ -14,9 +14,10 @@
 每次只要更新`hexo`分支的代码即可，提交博客步骤:
 
 1. `hexo new 'new blog'`, 编辑对应的 new-blog.md 文件  
-2. `hexo clean`, 清理public文件夹  
-3. `hexo g`, 生成静态文件  
-4. `hexo deploy`, 发布到github
+2. `hexo server`  部署到本地
+3. `hexo clean`, 清理public文件夹  
+4. `hexo g`, 生成静态文件  
+5. `hexo deploy`, 发布到github
 
 ### 迁移方法
 
@@ -26,8 +27,8 @@
 2. `cd lovanya.github.io/` 进入博客目录
 3. `git checkout hexo` 切换到 hexo 分支
 4. `npm install or yarn install` 安装依赖
-5. 发布博客方法参照*更新博客方法*
-6. 提交源码
+5. 发布博客方法参照*更新博客方法*  
+6. 提交源码
     ``` bash
     git add .
     git commit -m "add files"
