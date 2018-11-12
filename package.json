@@ -5,6 +5,9 @@
   "hexo": {
     "version": "3.8.0"
   },
+  "next": {
+    "version": "5.1.4"
+  },
   "dependencies": {
     "@lovanya/hexo-asset-image": "^0.0.3",
     "hexo": "^3.3.8",
