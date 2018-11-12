@@ -10,10 +10,10 @@ categories: MacOS
 编辑 .bash_profile 文件
 
 ```bash
-# 编辑 .bash_profile
+# 编辑 .bash_profile
 vi .bash_profile
 
-# 若不存在，则新建
+# 若不存在，则新建
 touch .bash_profile
 vi .bash_profile
 ```

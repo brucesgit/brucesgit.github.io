@@ -23,10 +23,9 @@
 
 在新的设备上部署博客
 
-1. `git clone https://github.com/lovanya/lovanya.github.io.git` 克隆库
+1. `git clone -b hexo https://github.com/lovanya/lovanya.github.io.git` 克隆库
 2. `cd lovanya.github.io/` 进入博客目录
-3. `git checkout hexo` 切换到 hexo 分支
-4. `git clone -b v5.1.4 https://github.com/iissnan/hexo-theme-next themes/next
+3. `git clone -b v5.1.4 https://github.com/iissnan/hexo-theme-next themes/next
 ` 安装 next 5.1.4 版本的主题
 5. `npm install or yarn install` 安装依赖
 6. 发布博客方法参照*更新博客方法*  
