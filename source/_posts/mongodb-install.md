@@ -142,10 +142,61 @@ auth = true
 #通过配置文件的方式启动mongdb
 mongod -f /mongoData/etc/mongo.conf
 ```
+
 如果出现 successfully, 则表示成功
+
 ```shell
 2018-11-24T17:17:03.968+0800 I CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
 about to fork child process, waiting until server is ready for connections.
 forked process: 2299
 child process started successfully, parent exiting
 ```
+
+### 配置超级用户和用户
+
+```shell
+#进入mongodb
+mongo
+
+#使用admin数据库
+use admin
+
+#查看有所有数据库
+show dbs
+```
+
+不出意外的话会提示没有权限，因为我们是以配置文件启动的mongodb，并且配置文件中我们开启了认证将auth字段设置成了true
+
+这个时候我们就应该开始配置用户
+
+- 创建超级管理员用户
+
+```shell
+use admin
+db.createUser({user:"admin",pwd:"password",roles:["root"]}) //admin这个数据库是系统自带的数据库，他的用户可以访问任何其他数据库的数据，也叫做超级管理员
+
+db.auth("admin","password") // => 1 表示验证通过 0表示验证失败
+
+show dbs //=>admin   0.000GB blog    0.000GB config  0.000GB 
+```
+
+这样就展示出所有的数据库了
+
+- 创建普通用户（某个数据库的用户）
+
+```shell
+use admin //=>进入admin数据库
+
+db.auth("admin","password") //=> 通过超级管理员验证
+
+use blog
+
+db.createUser({user: "blog", pwd: "password", roles: [{ role: "dbOwner", db: "blog" }]})
+
+show dbs => admin   0.000GB    blog    0.000GB    config  0.000GB    local   0.000GB
+```
+
+这样就创建了单独关于blog这个数据库的账户了，账号是blog，密码是password
+这里我们要注意一点，给创建普通数据库用户的时候要是在超级管理员验证完之后创建
+
+原文链接: https://segmentfault.com/a/1190000014740252
