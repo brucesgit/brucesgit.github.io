@@ -86,6 +86,23 @@ antigen apply
 source ~/.zshrc
 ```
 
+### 为 spaceship 主题安装字体 Powerline fonts
+
+```bash
+# clone
+git clone https://github.com/powerline/fonts.git --depth=1
+# install
+cd fonts
+./install.sh
+# clean-up a bit
+cd ..
+rm -rf fonts
+```
+
+安装完成打开终端的 偏好设置 -> 描述文件 -> 字体，并选择 Meslo LG 系列字体中的一个，这个时候终端里面的乱码问题就解决了。
+
+![改字体](oh-my-zsh/image2.png)
+
 这样就大功告成了😎
 
 ![ohmyzsh](oh-my-zsh/pic1.png)
