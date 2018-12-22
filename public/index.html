@@ -262,6 +262,161 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="lovanya.github.io/2018/12/22/oh-my-zsh/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Bruce Lin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="道心">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/22/oh-my-zsh/" itemprop="url">在 Mac 上安装 Oh My Zsh</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-22T15:40:33+08:00">
+                2018-12-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/macos/" itemprop="url" rel="index">
+                    <span itemprop="name">MacOS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="安装-zsh"><a href="#安装-zsh" class="headerlink" title="安装 zsh"></a>安装 zsh</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">brew install zsh</span><br><span class="line"><span class="comment"># 安装完成后</span></span><br><span class="line">zsh --version</span><br><span class="line"><span class="comment"># 显示类似zsh 5.1.1，则表示安装成功</span></span><br><span class="line"><span class="comment"># 切换默认的shell为zsh</span></span><br><span class="line">chsh -s $(<span class="built_in">which</span> zsh)</span><br><span class="line"><span class="comment"># 重启下终端</span></span><br></pre></td></tr></table></figure>
+<h3 id="安装-Oh-My-Zsh"><a href="#安装-Oh-My-Zsh" class="headerlink" title="安装 Oh My Zsh"></a>安装 Oh My Zsh</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 如果没有安装 git，要先安装</span></span><br><span class="line">brew install git</span><br><span class="line"><span class="comment"># 安装完后，开始安装 oh my zsh</span></span><br><span class="line">sh -c <span class="string">"<span class="variable">$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)</span>"</span></span><br><span class="line"><span class="comment"># 安装完后，应该能看到终端窗口内容显示的变化</span></span><br></pre></td></tr></table></figure>
+<h3 id="安装-angtigen"><a href="#安装-angtigen" class="headerlink" title="安装 angtigen"></a>安装 angtigen</h3><blockquote>
+<p><a href="http://antigen.sharats.me/" target="_blank" rel="noopener">A plugin manager for zsh, inspired by oh-my-zsh and vundle.</a></p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">curl -L git.io/antigen &gt; antigen.zsh</span><br><span class="line"><span class="comment"># or use git.io/antigen-nightly for the latest version</span></span><br></pre></td></tr></table></figure>
+<p>安装完成后，删除原来的 .zshrc 文件，新建一个</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rm ~/.zshrc</span><br><span class="line">touch ~/.zshrc</span><br></pre></td></tr></table></figure>
+<p>将下列内容复制后粘贴到新的 .zshrc 中并保存</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/antigen.zsh</span><br><span class="line"></span><br><span class="line"><span class="comment"># Load the oh-my-zsh's library.</span></span><br><span class="line">antigen use oh-my-zsh</span><br><span class="line"></span><br><span class="line"><span class="comment"># Bundles from the default repo (robbyrussell's oh-my-zsh).</span></span><br><span class="line">antigen bundle brew</span><br><span class="line">antigen bundle <span class="built_in">command</span>-not-found</span><br><span class="line">antigen bundle docker</span><br><span class="line">antigen bundle docker-compose</span><br><span class="line">antigen bundle gem</span><br><span class="line">antigen bundle git</span><br><span class="line">antigen bundle golang</span><br><span class="line">antigen bundle ng</span><br><span class="line">antigen bundle osx</span><br><span class="line">antigen bundle pip</span><br><span class="line"></span><br><span class="line"><span class="comment"># Syntax highlighting bundle.</span></span><br><span class="line">antigen bundle zsh-users/zsh-syntax-highlighting</span><br><span class="line">antigen bundle zsh-users/zsh-completions</span><br><span class="line">antigen bundle zsh-users/zsh-autosuggestions</span><br><span class="line">antigen bundle zsh-users/zsh-apple-touchbar</span><br><span class="line"></span><br><span class="line"><span class="comment"># Load the theme.</span></span><br><span class="line"><span class="comment"># antigen theme robbyrussell</span></span><br><span class="line">antigen theme https://github.com/denysdovhan/spaceship-prompt spaceship</span><br><span class="line"></span><br><span class="line"><span class="comment"># Tell Antigen that you're done.</span></span><br><span class="line">antigen apply</span><br></pre></td></tr></table></figure>
+<p>保存后，执行下该文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.zshrc</span><br></pre></td></tr></table></figure>
+<p>这样就大功告成了😎</p>
+<p><img src="/2018/12/22/oh-my-zsh/pic1.png" alt="ohmyzsh"></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="lovanya.github.io/2018/11/12/mongodb-install/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -771,7 +926,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

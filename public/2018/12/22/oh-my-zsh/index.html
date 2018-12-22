@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="terminal,git,">
+  <meta name="keywords" content="terminal,">
 
 
 
@@ -79,20 +79,20 @@
 
 
 
-<meta name="description" content="编辑 .bash_profile 文件 123456# 编辑 .bash_profilevi .bash_profile# 若不存在，则新建touch .bash_profilevi .bash_profile 将下列代码复制粘贴到 .bash_profile 的末尾，保存后重启终端即可。 123456789101112# Git branch in prompt.function git_bra">
-<meta name="keywords" content="terminal,git">
+<meta name="description" content="安装 zsh1234567brew install zsh# 安装完成后zsh --version# 显示类似zsh 5.1.1，则表示安装成功# 切换默认的shell为zshchsh -s $(which zsh)# 重启下终端 安装 Oh My Zsh12345# 如果没有安装 git，要先安装brew install git# 安装完后，开始安装 oh my zshsh -c &quot;$(curl">
+<meta name="keywords" content="terminal">
 <meta property="og:type" content="article">
-<meta property="og:title" content="解决在 Mac OS 下终端无法显示 git 当前分支的情况">
-<meta property="og:url" content="lovanya.github.io/2018/11/12/macos-git-branch/index.html">
+<meta property="og:title" content="在 Mac 上安装 Oh My Zsh">
+<meta property="og:url" content="lovanya.github.io/2018/12/22/oh-my-zsh/index.html">
 <meta property="og:site_name" content="道心">
-<meta property="og:description" content="编辑 .bash_profile 文件 123456# 编辑 .bash_profilevi .bash_profile# 若不存在，则新建touch .bash_profilevi .bash_profile 将下列代码复制粘贴到 .bash_profile 的末尾，保存后重启终端即可。 123456789101112# Git branch in prompt.function git_bra">
+<meta property="og:description" content="安装 zsh1234567brew install zsh# 安装完成后zsh --version# 显示类似zsh 5.1.1，则表示安装成功# 切换默认的shell为zshchsh -s $(which zsh)# 重启下终端 安装 Oh My Zsh12345# 如果没有安装 git，要先安装brew install git# 安装完后，开始安装 oh my zshsh -c &quot;$(curl">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="/2018/11/12/macos-git-branch/branch.jpg">
-<meta property="og:updated_time" content="2018-11-12T14:11:09.938Z">
+<meta property="og:image" content="/2018/12/22/oh-my-zsh/pic1.png">
+<meta property="og:updated_time" content="2018-12-22T08:31:13.172Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="解决在 Mac OS 下终端无法显示 git 当前分支的情况">
-<meta name="twitter:description" content="编辑 .bash_profile 文件 123456# 编辑 .bash_profilevi .bash_profile# 若不存在，则新建touch .bash_profilevi .bash_profile 将下列代码复制粘贴到 .bash_profile 的末尾，保存后重启终端即可。 123456789101112# Git branch in prompt.function git_bra">
-<meta name="twitter:image" content="/2018/11/12/macos-git-branch/branch.jpg">
+<meta name="twitter:title" content="在 Mac 上安装 Oh My Zsh">
+<meta name="twitter:description" content="安装 zsh1234567brew install zsh# 安装完成后zsh --version# 显示类似zsh 5.1.1，则表示安装成功# 切换默认的shell为zshchsh -s $(which zsh)# 重启下终端 安装 Oh My Zsh12345# 如果没有安装 git，要先安装brew install git# 安装完后，开始安装 oh my zshsh -c &quot;$(curl">
+<meta name="twitter:image" content="/2018/12/22/oh-my-zsh/pic1.png">
 
 
 
@@ -122,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="lovanya.github.io/2018/11/12/macos-git-branch/">
+  <link rel="canonical" href="lovanya.github.io/2018/12/22/oh-my-zsh/">
 
 
 
 
 
-  <title>解决在 Mac OS 下终端无法显示 git 当前分支的情况 | 道心</title>
+  <title>在 Mac 上安装 Oh My Zsh | 道心</title>
   
 
 
@@ -265,7 +265,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="lovanya.github.io/2018/11/12/macos-git-branch/">
+    <link itemprop="mainEntityOfPage" href="lovanya.github.io/2018/12/22/oh-my-zsh/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Bruce Lin">
@@ -282,7 +282,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">解决在 Mac OS 下终端无法显示 git 当前分支的情况</h1>
+          <h1 class="post-title" itemprop="name headline">在 Mac 上安装 Oh My Zsh</h1>
         
 
         <div class="post-meta">
@@ -294,8 +294,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-12T00:02:35+08:00">
-                2018-11-12
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-22T15:40:33+08:00">
+                2018-12-22
               </time>
             
 
@@ -354,11 +354,20 @@
       
 
       
-        <p>编辑 .bash_profile 文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 编辑 .bash_profile</span></span><br><span class="line">vi .bash_profile</span><br><span class="line"></span><br><span class="line"><span class="comment"># 若不存在，则新建</span></span><br><span class="line">touch .bash_profile</span><br><span class="line">vi .bash_profile</span><br></pre></td></tr></table></figure>
-<p>将下列代码复制粘贴到 .bash_profile 的末尾，保存后重启终端即可。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Git branch in prompt.</span></span><br><span class="line"><span class="keyword">function</span> git_branch &#123;</span><br><span class="line">   branch=<span class="string">"`git branch 2&gt;/dev/null | grep "</span>^\*<span class="string">" | sed -e "</span>s/^\*\ //<span class="string">"`"</span></span><br><span class="line">   <span class="keyword">if</span> [ <span class="string">"<span class="variable">$&#123;branch&#125;</span>"</span> != <span class="string">""</span> ];<span class="keyword">then</span></span><br><span class="line">       <span class="keyword">if</span> [ <span class="string">"<span class="variable">$&#123;branch&#125;</span>"</span> = <span class="string">"(no branch)"</span> ];<span class="keyword">then</span></span><br><span class="line">           branch=<span class="string">"(`git rev-parse --short HEAD`...)"</span></span><br><span class="line">       <span class="keyword">fi</span></span><br><span class="line">       <span class="built_in">echo</span> <span class="string">" (<span class="variable">$branch</span>)"</span></span><br><span class="line">   <span class="keyword">fi</span></span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="built_in">export</span> PS1=<span class="string">'\u@\h \[\033[01;36m\]\W\[\033[01;32m\]$(git_branch)\[\033[00m\] \$ '</span></span><br></pre></td></tr></table></figure>
-<p>显示效果<br><img src="/2018/11/12/macos-git-branch/branch.jpg" alt="分支显示"></p>
+        <h3 id="安装-zsh"><a href="#安装-zsh" class="headerlink" title="安装 zsh"></a>安装 zsh</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">brew install zsh</span><br><span class="line"><span class="comment"># 安装完成后</span></span><br><span class="line">zsh --version</span><br><span class="line"><span class="comment"># 显示类似zsh 5.1.1，则表示安装成功</span></span><br><span class="line"><span class="comment"># 切换默认的shell为zsh</span></span><br><span class="line">chsh -s $(<span class="built_in">which</span> zsh)</span><br><span class="line"><span class="comment"># 重启下终端</span></span><br></pre></td></tr></table></figure>
+<h3 id="安装-Oh-My-Zsh"><a href="#安装-Oh-My-Zsh" class="headerlink" title="安装 Oh My Zsh"></a>安装 Oh My Zsh</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 如果没有安装 git，要先安装</span></span><br><span class="line">brew install git</span><br><span class="line"><span class="comment"># 安装完后，开始安装 oh my zsh</span></span><br><span class="line">sh -c <span class="string">"<span class="variable">$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)</span>"</span></span><br><span class="line"><span class="comment"># 安装完后，应该能看到终端窗口内容显示的变化</span></span><br></pre></td></tr></table></figure>
+<h3 id="安装-angtigen"><a href="#安装-angtigen" class="headerlink" title="安装 angtigen"></a>安装 angtigen</h3><blockquote>
+<p><a href="http://antigen.sharats.me/" target="_blank" rel="noopener">A plugin manager for zsh, inspired by oh-my-zsh and vundle.</a></p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">curl -L git.io/antigen &gt; antigen.zsh</span><br><span class="line"><span class="comment"># or use git.io/antigen-nightly for the latest version</span></span><br></pre></td></tr></table></figure>
+<p>安装完成后，删除原来的 .zshrc 文件，新建一个</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rm ~/.zshrc</span><br><span class="line">touch ~/.zshrc</span><br></pre></td></tr></table></figure>
+<p>将下列内容复制后粘贴到新的 .zshrc 中并保存</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/antigen.zsh</span><br><span class="line"></span><br><span class="line"><span class="comment"># Load the oh-my-zsh's library.</span></span><br><span class="line">antigen use oh-my-zsh</span><br><span class="line"></span><br><span class="line"><span class="comment"># Bundles from the default repo (robbyrussell's oh-my-zsh).</span></span><br><span class="line">antigen bundle brew</span><br><span class="line">antigen bundle <span class="built_in">command</span>-not-found</span><br><span class="line">antigen bundle docker</span><br><span class="line">antigen bundle docker-compose</span><br><span class="line">antigen bundle gem</span><br><span class="line">antigen bundle git</span><br><span class="line">antigen bundle golang</span><br><span class="line">antigen bundle ng</span><br><span class="line">antigen bundle osx</span><br><span class="line">antigen bundle pip</span><br><span class="line"></span><br><span class="line"><span class="comment"># Syntax highlighting bundle.</span></span><br><span class="line">antigen bundle zsh-users/zsh-syntax-highlighting</span><br><span class="line">antigen bundle zsh-users/zsh-completions</span><br><span class="line">antigen bundle zsh-users/zsh-autosuggestions</span><br><span class="line">antigen bundle zsh-users/zsh-apple-touchbar</span><br><span class="line"></span><br><span class="line"><span class="comment"># Load the theme.</span></span><br><span class="line"><span class="comment"># antigen theme robbyrussell</span></span><br><span class="line">antigen theme https://github.com/denysdovhan/spaceship-prompt spaceship</span><br><span class="line"></span><br><span class="line"><span class="comment"># Tell Antigen that you're done.</span></span><br><span class="line">antigen apply</span><br></pre></td></tr></table></figure>
+<p>保存后，执行下该文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.zshrc</span><br></pre></td></tr></table></figure>
+<p>这样就大功告成了😎</p>
+<p><img src="/2018/12/22/oh-my-zsh/pic1.png" alt="ohmyzsh"></p>
 
       
     </div>
@@ -378,8 +387,6 @@
           
             <a href="/tags/terminal/" rel="tag"># terminal</a>
           
-            <a href="/tags/git/" rel="tag"># git</a>
-          
         </div>
       
 
@@ -391,15 +398,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/11/12/mongodb-install/" rel="next" title="在 Mac 上安装并配置 MongoDB">
+                <i class="fa fa-chevron-left"></i> 在 Mac 上安装并配置 MongoDB
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/11/12/local-storage/" rel="prev" title="JavaScript 中 localStorage 和 sessionStorage 的处理">
-                JavaScript 中 localStorage 和 sessionStorage 的处理 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -451,8 +458,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -530,6 +546,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装-zsh"><span class="nav-number">1.</span> <span class="nav-text">安装 zsh</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装-Oh-My-Zsh"><span class="nav-number">2.</span> <span class="nav-text">安装 Oh My Zsh</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装-angtigen"><span class="nav-number">3.</span> <span class="nav-text">安装 angtigen</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
